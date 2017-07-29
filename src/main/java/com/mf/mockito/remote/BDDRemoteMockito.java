@@ -93,8 +93,8 @@ public class BDDRemoteMockito {
             return new BDDRemoteOngoingStubbing<T>(ongoingStubbing.thenThrow(throwables));
         }
 
-        public BDDRemoteOngoingStubbing<T> willThrow(Class<? extends Throwable>... throwableClasses) {
-            return new BDDRemoteOngoingStubbing<T>(ongoingStubbing.thenThrow(throwableClasses));
+        public BDDRemoteOngoingStubbing<T> willThrow(Class<? extends Throwable> throwableClass) {
+            return new BDDRemoteOngoingStubbing<T>(ongoingStubbing.thenThrow(throwableClass));
         }
 
         public BDDRemoteOngoingStubbing<T> willCallRealMethod() {

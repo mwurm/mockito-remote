@@ -54,6 +54,11 @@ class SerialisableInvocation implements Invocation, VerificationAwareInvocation,
     }
 
     @Override
+    public <T> T getArgument(int index) {
+        return null;
+    }
+
+    @Override
     public boolean isVerified() {
         return verified || ignoredForVerification;
     }
@@ -91,6 +96,11 @@ class SerialisableInvocation implements Invocation, VerificationAwareInvocation,
     @Override
     public Object[] getRawArguments() {
         return this.rawArguments;
+    }
+
+    @Override
+    public Class<?> getRawReturnType() {
+        return this.getMock().getClass();
     }
 
     @Override

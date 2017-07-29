@@ -18,7 +18,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class RemoteMockitoClient {
     private static final RemoteMockMaker REMOTE_MOCK_MAKER = new RemoteMockMaker();
-    private static final String CGLIB_PROXY_SUFFIX = "$$";
+    private static final String CGLIB_PROXY_SUFFIX = "$";
     private static final int OK = 200;
 
     private final String host;

@@ -23,7 +23,15 @@ public class SomeRemoteApp extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        foo.foo(bar.bar());
+        try {
+            String barResult = bar.bar();
+            System.out.println("barResult = " + barResult);
+            foo.foo(barResult);
+            System.out.println("foo-bar-Call successful");
+        } catch(Exception e) {
+            System.err.println(e.getMessage());
+            throw e;
+        }
         response.setContentType("text/plain");
     }
 }

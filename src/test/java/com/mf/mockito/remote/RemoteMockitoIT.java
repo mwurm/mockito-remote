@@ -2,20 +2,19 @@ package com.mf.mockito.remote;
 
 import com.example.Bar;
 import com.example.Foo;
-import com.mf.mockito.remote.RemoteMockitoClient;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.io.IOException;
 import java.net.URL;
 
-import static com.mf.mockito.remote.BDDRemoteMockito.*;
-import static org.mockito.Matchers.anyString;
+import static com.mf.mockito.remote.BDDRemoteMockito.given;
+import static com.mf.mockito.remote.BDDRemoteMockito.verify;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class RemoteMockitoIT {
 
     @Mock
@@ -42,7 +41,7 @@ public class RemoteMockitoIT {
 
     @Test(expected = IOException.class)
     public void foo() throws Exception {
-        willThrow(IllegalArgumentException.class).given(foo).foo(anyString());
+        given(bar.bar()).willThrow(IllegalArgumentException.class);
 
         new URL("http://localhost:8080/someRemoteApplication/endpoint").getContent();
     }
