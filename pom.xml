@@ -8,6 +8,11 @@
         <jetty.daemon>true</jetty.daemon>
     </properties>
 
+    <scm>
+        <connection>scm:git:https://matthiaswurm@bitbucket.org/matthiaswurm/mockito-remote.git</connection>
+        <developerConnection>scm:git:https://matthiaswurm@bitbucket.org/matthiaswurm/mockito-remote.git</developerConnection>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
