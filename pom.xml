@@ -1,8 +1,8 @@
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mf</groupId>
     <artifactId>mockito-remote</artifactId>
-    <version>2.8.47-0-SNAPSHOT</version>
+    <version>2.8.47-1-SNAPSHOT</version>
 
     <properties>
         <jetty.daemon>true</jetty.daemon>
@@ -11,7 +11,8 @@
     <scm>
         <connection>scm:git:https://matthiaswurm@bitbucket.org/matthiaswurm/mockito-remote.git</connection>
         <developerConnection>scm:git:https://matthiaswurm@bitbucket.org/matthiaswurm/mockito-remote.git</developerConnection>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
 
     <build>
         <plugins>
